@@ -54,12 +54,12 @@
         <div class="card">
             <div class="card-body">
             <h4 class="card-title">Staking Wallets</h4>
-                <div class="table-responsive">
+                <div class="table-responsive small">
                     <table class="table table-border-bottom table-striped table-sm table-hover">
                         <thead class="thead">
                             <tr>
                                 <th class="text-primary"><strong>WALLET</strong></th>
-                                <th class="text-primary"><strong>BALANCE (UNCONFIRMED)</strong></th>
+                                <th class="text-primary text-right"><strong>BALANCE (UNCONFIRMED)</strong></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,9 +73,9 @@
                                         <tr @onclick="() => { SetWalletName(walletName); }">
                                             <td class="align-middle">@walletName</td>
                                         @if (@mainAccountBalance.AmountUnconfirmed >0) {
-                                            <td class="align-middle">@mainAccountBalance.AmountConfirmed (@mainAccountBalance.AmountUnconfirmed )</td>
+                                            <td class="align-middle text-right">@mainAccountBalance.AmountConfirmed (@mainAccountBalance.AmountUnconfirmed )</td>
                                         } else {
-                                            <td> class="align-middle"@mainAccountBalance.AmountConfirmed</td>
+                                            <td class="align-middle text-right">@mainAccountBalance.AmountConfirmed</td>
                                         }
                                         </tr>
                                     }
