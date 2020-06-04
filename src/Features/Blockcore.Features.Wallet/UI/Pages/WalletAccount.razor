@@ -13,10 +13,13 @@
 var accountBalance = this.WalletManager.GetBalances(walletname, accountname).Single();
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h1 class="h2">Wallet Account: <strong>@walletname</strong></h1>
+    <h1 class="h2"><strong>Wallet - @walletname</strong></h1>
     <div class="btn-toolbar mb-2 mb-md-0">
-        <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToReceiveWallet(walletname, accountname); }" >Receive</button>
-        <button class="btn btn-sm btn-primary" @onclick="() => { NavigateToSendWallet(walletname, accountname); }" >Send</button>
+        <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToReceiveWallet(walletname, accountname); }" >
+             <span class="oi oi-data-transfer-download" aria-hidden="true"></span> Receive</button>
+        <button class="btn btn-sm btn-primary" @onclick="() => { NavigateToSendWallet(walletname, accountname); }" >
+            <span class="oi oi-data-transfer-upload" aria-hidden="true"></span> Send</button>
+
     </div>
 </div>
 
