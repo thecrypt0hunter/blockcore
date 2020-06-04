@@ -15,10 +15,13 @@
         <div class="input-group">
                 <input @bind="NodeIp" type="text" class="form-control" placeholder="Node IP Address" />
                 <div class="input-group-append">
-                    <button class="btn btn-sm btn-primary mr-1" @onclick="Addnode">Add Node</button>
+                    <button class="btn btn-sm btn-primary mr-1" @onclick="Addnode">
+                        <span class="oi oi-plus" aria-hidden="true"></span> Add Node</button>
                 </div>
-                <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToLogs(); }">View Logs</button>
-                <button class="btn btn-sm btn-danger" @onclick="() => { Shutdown(); }">Shutdown</button>
+                <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToLogs(); }">
+                    <span class="oi oi-list" aria-hidden="true"></span> View Logs</button>
+                <button class="btn btn-sm btn-danger" @onclick="() => { Shutdown(); }">
+                    <span class="oi oi-power-standby" aria-hidden="true"></span> Shutdown</button>
         </div>
     </div>
 

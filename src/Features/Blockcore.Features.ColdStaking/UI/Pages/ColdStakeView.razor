@@ -12,11 +12,14 @@
 @{
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h1 style="max-width: 18em" class="h2"><strong>Cold Staking Dashboard for @walletname</strong></h1>
+    <h1 style="max-width: 18em" class="h2"><strong>Cold Staking - @walletname</strong></h1>
     <div class="btn-toolbar mb-2 mb-md-0">
-        <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToSetup(walletname); }">Coldstake</button>
-        <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToDelegate(walletname); }">Delegate</button>
-        <button class="btn btn-sm btn-primary" @onclick="() => { NavigateToWithdraw(walletname); }">Withdraw</button>
+        <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToSetup(walletname); }">
+            <span class="oi oi-pulse" aria-hidden="true"></span> Coldstake</button>
+        <button class="btn btn-sm btn-primary mr-1" @onclick="() => { NavigateToDelegate(walletname); }">
+            <span class="oi oi-cloud-upload" aria-hidden="true"></span> Delegate</button>
+        <button class="btn btn-sm btn-primary" @onclick="() => { NavigateToWithdraw(walletname); }">
+            <span class="oi oi-cloud-download" aria-hidden="true"></span> Withdraw</button>
     </div>
 </div>
 
