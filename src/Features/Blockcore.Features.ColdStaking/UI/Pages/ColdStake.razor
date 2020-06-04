@@ -13,9 +13,6 @@
 @if (!NodeDeployments.GetFlags().ScriptFlags.HasFlag(ScriptVerify.CheckColdStakeVerify))
 {
     <h2>Cold staking is not activated</h2>
-    <hr />
-        <button @onclick="NavigateToEnableWallet" class="btn btn-primary">Enable Cold Staking</button>
-    <br />
     return;
 }
 

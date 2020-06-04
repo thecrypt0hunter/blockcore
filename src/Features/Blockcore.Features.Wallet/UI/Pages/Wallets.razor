@@ -63,8 +63,6 @@
                                     foreach (var account in this.WalletManager.GetAccounts(walletName))
                                     {
                                         var accountBalance = this.WalletManager.GetBalances(walletName, account.Name).Single();
->>>>>>> 3d82f6864a58407921755fb0673aef83e025101b
-
                                         <tr @onclick="() => { NavigateToWallet(walletName, account.Name); }">
                                             <td>@walletName</td>
                                             <td>@accountBalance.AmountConfirmed</td>
