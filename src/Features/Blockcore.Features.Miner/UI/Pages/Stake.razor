@@ -58,8 +58,8 @@
                     <table class="table table-border-bottom table-striped table-sm table-hover">
                         <thead class="thead">
                             <tr>
-                                <th>Wallet</th>
-                                <th>Main balance (unconfirmed)</th>
+                                <th class="text-primary"><strong>WALLET</strong></th>
+                                <th class="text-primary"><strong>BALANCE (UNCONFIRMED)</strong></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,11 +71,11 @@
                                         var mainAccountBalance = this.WalletManager.GetBalances(walletName, account.Name).Single();
 
                                         <tr @onclick="() => { SetWalletName(walletName); }">
-                                            <td>@walletName</td>
+                                            <td class="align-middle">@walletName</td>
                                         @if (@mainAccountBalance.AmountUnconfirmed >0) {
-                                            <td>@mainAccountBalance.AmountConfirmed (@mainAccountBalance.AmountUnconfirmed )</td>
+                                            <td class="align-middle">@mainAccountBalance.AmountConfirmed (@mainAccountBalance.AmountUnconfirmed )</td>
                                         } else {
-                                            <td>@mainAccountBalance.AmountConfirmed</td>
+                                            <td> class="align-middle"@mainAccountBalance.AmountConfirmed</td>
                                         }
                                         </tr>
                                     }
